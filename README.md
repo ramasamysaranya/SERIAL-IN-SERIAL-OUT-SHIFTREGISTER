@@ -24,8 +24,32 @@ The synchronous nature of the flip-flops ensures that the shifting of data occur
 Each D flip-flop in the circuit has a Data (D) input, a Clock (CLK) input, and an output (Q). The D input represents the data to be loaded into the flip-flop, while the CLK input is connected to the common clock signal. The output (Q) of each flip-flop is connected to the D input of the next flip-flop, forming a cascade.
 
 **Procedure**
+## PROCEDURE
 
-/* write all the steps invloved */
+1. Open Quartus II and create a new project using File → New Project Wizard.
+
+2. Enter the project name and select the required FPGA device.
+
+3. Create a new Verilog HDL file using File → New → Verilog HDL File.
+
+4. Write the Verilog program for the SISO (Serial-In Serial-Out) shift register and save the file with a `.v` extension.
+
+5. Set the Verilog module as the Top-Level Entity of the project.
+
+6. Compile the design using Processing → Start Compilation and check for errors or warnings.
+
+7. Open Tools → University Program → Simulation Waveform Editor to create the input waveform.
+
+8. Add the required input and output signals such as clock (clk), serial input (si), clear/reset, and serial output (so).
+
+9. Apply suitable values to the serial input and clock signals and save the waveform file.
+
+10. Perform functional simulation and observe the shifting of the input data through the register.
+
+11. Verify that the serial data appears at the serial output after the required clock cycles.
+
+12. Confirm that the simulated output matches the expected SISO shift-register operation.
+
 
 **PROGRAM**
 
