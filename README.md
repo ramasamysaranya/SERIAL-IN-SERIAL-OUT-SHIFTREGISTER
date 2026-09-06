@@ -26,29 +26,35 @@ Each D flip-flop in the circuit has a Data (D) input, a Clock (CLK) input, and a
 **Procedure**
 ## PROCEDURE
 
-1. Open Quartus II and create a new project using File → New Project Wizard.
+1.Open Quartus Prime and create a new project for the SISO Shift Register.
 
-2. Enter the project name and select the required FPGA device.
+2.Create a new Verilog HDL file and enter the Verilog program for the 4-bit SISO Shift Register.
 
-3. Create a new Verilog HDL file using File → New → Verilog HDL File.
+3.Define the inputs CLK, SI, and CLEAR, and the serial output SO.
 
-4. Write the Verilog program for the SISO (Serial-In Serial-Out) shift register and save the file with a `.v` extension.
+4.Implement the 4-bit shift register using a 4-bit register tmp.
 
-5. Set the Verilog module as the Top-Level Entity of the project.
+5.Apply the CLEAR signal to reset the register to 0000.
 
-6. Compile the design using Processing → Start Compilation and check for errors or warnings.
+6.On every positive edge of the clock, shift the stored data by one position and load the serial input into the first bit.
 
-7. Open Tools → University Program → Simulation Waveform Editor to create the input waveform.
+7.Assign the last bit of the register to the serial output SO.
 
-8. Add the required input and output signals such as clock (clk), serial input (si), clear/reset, and serial output (so).
+8.Save the Verilog file and set it as the Top-Level Entity.
 
-9. Apply suitable values to the serial input and clock signals and save the waveform file.
+9.Compile the design using Start Compilation and check for errors.
 
-10. Perform functional simulation and observe the shifting of the input data through the register.
+10.Open the RTL Viewer to verify the generated SISO Shift Register circuit.
 
-11. Verify that the serial data appears at the serial output after the required clock cycles.
+11.Open the Simulation Waveform Editor and add CLK, CLEAR, SI, and SO signals.
 
-12. Confirm that the simulated output matches the expected SISO shift-register operation.
+12.Apply suitable input combinations and clock pulses to verify the shifting operation.
+
+13.Simulate the circuit and observe the output waveform.
+
+14.Verify that the serial input data appears at the serial output after passing through the 4-bit register.
+
+15.Compare the simulation results with the expected functional behavior and verify the operation of the SISO Shift Register.
 
 
 **PROGRAM**
@@ -76,7 +82,8 @@ endmodule
 
 
 **RTL LOGIC FOR SISO Shift Register**
-<img width="1396" height="1127" alt="DE exp 5" src="https://github.com/user-attachments/assets/0b19e9f1-8282-4d3d-947b-8b3b1562eea7" />
+<img width="1917" height="1005" alt="image" src="https://github.com/user-attachments/assets/8e6a4f98-777e-4b1a-80c9-cad636cc10fa" />
+
 
 **TIMING DIGRAMS FOR SISO Shift Register**
 <img width="1595" height="986" alt="DE exp5 img2" src="https://github.com/user-attachments/assets/ba3e23f5-434f-4af6-a2ed-2ef7146438c4" />
